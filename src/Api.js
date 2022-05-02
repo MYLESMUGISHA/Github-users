@@ -6,9 +6,9 @@ const url = "https://api.github.com/users";
 
 function Api() {
     const [user,setUser]= useState([]);
-    // const [user, setUser2] = useState("loading")
+   
     const [loading, setLoading] = useState(true)
-    // const[error, setError] = useState(false)
+    
     
     useEffect(()=> {
         Axios.get(url).then((resp)=>{
@@ -34,32 +34,7 @@ function Api() {
     )
   }
 
-//   else(
-//       setLoading(false)
 
-//   )
-
-//   if (resp.status =>200&& resp.status<= 299){
-
-//     return resp.json()
-//   }
-
-//   else{
-
-
-//     setLoading(false)
-//     setError(true)
-//     throw new Error(resp.statusText)
-//   }
-// }).then(user)=>{
-
-//     const{login} =user;
-
-//     setUser2(user)
-//     setLoading(false)
-// }).catch(error)=>{
-//     setError(true)
-// }
   return(
 
     
@@ -68,6 +43,8 @@ function Api() {
           <h1>Github Users</h1>
 
         </div>
+
+
     <div className='user-container'> 
         {user.map((person)=>{
             const {login,avatar_url, html_url}= person
@@ -87,6 +64,3 @@ function Api() {
   )
     }
 export default Api;
-
-// // <h1>{login}</h1>
-// //     <img src={avatar_url}></img>

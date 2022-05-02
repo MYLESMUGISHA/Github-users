@@ -23,7 +23,7 @@ return(
       <div key={id}>
        <p>{login}</p> 
         <img src={avatar_url} alt ={login}></img>
-        <a href={html_url}> click me</a>
+        <a href={html_url}>click me</a>
       
    </div>
       )
